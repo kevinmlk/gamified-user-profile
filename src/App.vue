@@ -1,11 +1,17 @@
-<script setup></script>
+<script setup>
+import Navigation from '@/components/Navigation.vue';
+import Dashboard from '@/components/Dashboard.vue';
+
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+    <header class="container mb-2">
+        <Navigation />
+    </header>
+
+    <main class="container bg-light rounded-3">
+        <Dashboard />
+    </main>
 </template>
 
 <style scoped></style>
