@@ -15,20 +15,30 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="dashboard">
-        <ProfileCard
-            v-if="!store.loading"
-            :profile="store.profile"
-        />
+    <div id="dashboard" class="p-4 row">
+        <section class="col-4">
+            <article>
+                <ProfileCard
+                    v-if="!store.loading"
+                    :profile="store.profile"
+                />
+            </article>
+        </section>
 
-        <LevelProgress
-            v-if="!store.loading"
-            :profile="store.profile"
-        />
+        <section class="col-7 d-flex flex-column gap-5">
+            <article>
+                <LevelProgress
+                    v-if="!store.loading"
+                    :profile="store.profile"
+                />
+            </article>
 
-        <AchievementList
-            v-if="!store.loading"
-            :achievements="store.achievements"
-        />
+            <article>
+                <AchievementList
+                    v-if="!store.loading"
+                    :achievements="store.achievements"
+                />
+            </article>
+        </section>
     </div>
 </template>

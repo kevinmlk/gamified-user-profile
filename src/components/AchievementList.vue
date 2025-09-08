@@ -9,27 +9,23 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="achievement-list">
+    <h3>Achievements</h3>
+    <div class="row achievement-list">
         <div
         v-for="achievement in achievements"
         :key="achievement.id"
-        class="card mb-3"
-        style="max-width: 540px;"
+        class="col-3 mb-3 d-flex"
         >
-        <div class="row g-0">
-            <div class="col-md-4 d-flex align-items-center justify-content-center">
+            <div class="card" style="width: 12rem;">
                 <img
-                    :src="achievement.icon_url"
-                    class="img-fluid rounded-start"
-                    :alt="achievement.title"
-                    style="max-height: 80px;"
+                :src="achievement.icon_url"
+                class="card-img-top"
+                :alt="achievement.title"
+                style="height: 60px; object-fit: cover;"
                 />
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ achievement.title }}</h5>
-                        <p class="card-text">{{ achievement.description }}</p>
-                    </div>
+                <div class="card-body p-2">
+                    <h6 class="card-title mb-1">{{ achievement.title }}</h6>
+                    <p class="card-text small mb-0">{{ achievement.description }}</p>
                 </div>
             </div>
         </div>
