@@ -25,7 +25,7 @@ const props = defineProps({
                 />
                 <div class="card-body p-2">
                     <h6 class="card-title mb-1">{{ achievement.title }}</h6>
-                    <p class="card-text small mb-0">{{ achievement.description }}</p>
+                    <p class="card-text small mb-0 text-tertiary">{{ achievement.description }}</p>
                 </div>
             </div>
         </div>
