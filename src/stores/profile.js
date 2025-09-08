@@ -14,6 +14,14 @@ export const useProfileStore = defineStore('profile', {
             this.profile = mockData.profile;
             this.achievements = mockData.achievements;
             this.loading = false;
+        },
+        addXp(amount) {
+            this.profile.current_xp += amount;
+            if (this.profile.current_xp >= this.profile.xp_to_next_level) {
+                this.profile.level += 1;
+                this.profile.current_xp -= this.profile.xp_to_next_level;
+                this.profile.xp_to_next_level += 500;
+            }
         }
     }
 });

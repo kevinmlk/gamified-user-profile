@@ -29,6 +29,14 @@ onMounted(() => {
                     :profile="store.profile"
                 />
             </article>
+
+            <button
+                v-if="!store.loading"
+                class="btn btn-success mt-3"
+                @click="store.addXp(300)"
+            >
+                Add 300 XP
+            </button>
         </section>
 
         <section class="col-7 d-flex flex-column gap-5">
