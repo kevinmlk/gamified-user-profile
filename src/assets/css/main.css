@@ -28,3 +28,15 @@ h3 {
 .progress-bar {
     background-color: #5217ff;
 }
+
+@media only screen and (max-width: 992px) {
+    #dashboard {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .achievement-list .col-3 {
+        width: fit-content;
+    }
+}

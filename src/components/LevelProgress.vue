@@ -16,7 +16,7 @@ const progressPercent = computed(() => {
 
 <template>
   <div>
-    <label>Level Progress</label>
+    <h3>Level Progress</h3>
     <div class="progress" style="height: 24px;">
       <div
         class="progress-bar"

@@ -22,7 +22,7 @@ onMounted(() => {
             </div>
         </div>
 
-        <section class="col-4">
+        <section id="profile" class="col-4">
             <article>
                 <ProfileCard
                     v-if="!store.loading"
@@ -33,13 +33,13 @@ onMounted(() => {
             <button
                 v-if="!store.loading"
                 class="btn btn-success mt-3"
-                @click="store.addXp(300)"
+                @click="store.addXp(450)"
             >
-                Add 300 XP
+                Add 450 XP
             </button>
         </section>
 
-        <section class="col-7 d-flex flex-column gap-5">
+        <section id="levels" class="col-7 d-flex flex-column gap-4">
             <article>
                 <LevelProgress
                     v-if="!store.loading"
